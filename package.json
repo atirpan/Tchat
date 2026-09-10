@@ -5,8 +5,8 @@
   "description": "Privacy-first, anonymity-focused communication system. Phase 0 foundation.",
   "packageManager": "pnpm@11.19.0",
   "engines": {
-    "node": "24.19.0",
-    "pnpm": "11.19.0"
+    "node": ">=18.18.0 <25",
+    "pnpm": ">=9.3.0 <12"
   },
   "scripts": {
     "launch:check": "node scripts/launch-gate.mjs",
