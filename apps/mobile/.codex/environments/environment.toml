@@ -1,0 +1,11 @@
+[[actions]]
+name = "Run"
+command = "./script/build_and_run.sh"
+
+[[actions]]
+name = "Run Web"
+command = "./script/build_and_run.sh --web"
+
+[[actions]]
+name = "Export Web"
+command = "./script/build_and_run.sh --export-web"

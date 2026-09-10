@@ -1,0 +1,38 @@
+{
+  "name": "anonym-messenger",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Privacy-first, anonymity-focused communication system. Phase 0 foundation.",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": "24.19.0",
+    "pnpm": "11.19.0"
+  },
+  "scripts": {
+    "launch:check": "node scripts/launch-gate.mjs",
+    "rust:test": "node scripts/rust.mjs test",
+    "rust:lint": "node scripts/rust.mjs lint",
+    "build": "node scripts/workspace.mjs build",
+    "dev": "node scripts/workspace.mjs dev",
+    "mobile:start": "pnpm --filter @anonym-messenger/mobile start",
+    "mobile:android": "pnpm --filter @anonym-messenger/mobile android",
+    "mobile:ios": "pnpm --filter @anonym-messenger/mobile ios",
+    "lint": "node scripts/workspace.mjs lint",
+    "test": "node scripts/workspace.mjs test",
+    "typecheck": "node scripts/workspace.mjs typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "clean": "turbo run clean && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.3",
+    "typescript": "^5.5.4"
+  }
+}

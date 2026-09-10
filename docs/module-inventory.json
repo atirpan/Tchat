@@ -1,0 +1,1022 @@
+{
+  "master_sha256": "2b42d493b74042cd7f3ba984f91a2525152a77d960189d33c392f1417a44b0fe",
+  "public_launch": "BLOCKED",
+  "scope": "Module-level initial inventory, not full requirements verification.",
+  "modules": [
+    {
+      "id": 1,
+      "title": "Ana Mimari Anayasası ve Modül İzolasyonu / Master Architecture Constitution & Module Isolation",
+      "status": "PARTIAL",
+      "source_line": 199,
+      "evidence_paths": [
+        "apps/api/test/client-boundary.spec.ts",
+        "docs/ADR_0001_CLIENT_BOUNDARY.md"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 2,
+      "title": "Kod Deposu, Tekrarlanabilir Derleme ve Tedarik Zinciri / Monorepo, Build, Reproducibility & Supply Chain",
+      "status": "PARTIAL",
+      "source_line": 223,
+      "evidence_paths": [
+        "package.json",
+        ".github/workflows/ci.yml"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 3,
+      "title": "Güvenli Bellek, Güvenli Depolama, Kriptografik Rastgelelik ve Kontrollü Saat / SecureMemory, SafeStorage, CSPRNG & Controlled Clock",
+      "status": "PARTIAL",
+      "source_line": 248,
+      "evidence_paths": [
+        "crates/secure-memory/src/lib.rs",
+        "packages/security/src/secure-memory.ts",
+        "packages/security/src/secure-memory.spec.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 4,
+      "title": "Kayıt, Hassas Veri Maskeleme ve Gizlilik Güvenli Gözlemlenebilirlik / Logging, Redaction & Privacy-Safe Observability",
+      "status": "PARTIAL",
+      "source_line": 272,
+      "evidence_paths": [
+        "packages/security/src/redaction.ts",
+        "packages/security/src/redaction.spec.ts",
+        "docs/ADR_0003_REDACTION.md"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 5,
+      "title": "Yetenek Kayıt Sistemi, Özellik Bayrakları ve Sessiz Güvenlik Düşürmeme / Capability Registry, Feature Flags & No Silent Downgrade",
+      "status": "PARTIAL",
+      "source_line": 295,
+      "evidence_paths": [
+        "crates/policy/src/lib.rs"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 6,
+      "title": "Politika Motoru, Sürümleme ve Olay Omurgası / Policy Engine, Versioning & Event Bus",
+      "status": "PARTIAL",
+      "source_line": 318,
+      "evidence_paths": [
+        "crates/policy/src/lib.rs"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 7,
+      "title": "Tehdit Modeli, Güvenlik Temeli ve Gizlilik Değişmezleri / Threat Model, Security Baseline & Privacy Invariants",
+      "status": "MISSING",
+      "source_line": 341,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 8,
+      "title": "Gizli Değerler, Yapılandırma ve Ortam İzolasyonu / Secrets, Configuration & Environment Isolation",
+      "status": "MISSING",
+      "source_line": 364,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 9,
+      "title": "Kök Kimlik, Seed/Tohum ve Kurtarma Çekirdeği / Root Identity, Seed & Recovery Core",
+      "status": "PARTIAL",
+      "source_line": 388,
+      "evidence_paths": [
+        "packages/reference-client/src/modules/identity/seed.service.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 10,
+      "title": "Türetilmiş, Geçici ve Kişiye Özel Kimlik / Derived / Ephemeral / Peer-Specific Identity",
+      "status": "PARTIAL",
+      "source_line": 411,
+      "evidence_paths": [
+        "packages/reference-client/src/modules/identity/derivation.service.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 11,
+      "title": "Cihaz Güveni, Eşleştirme, İptal ve Çoklu Cihaz / Device Trust, Pairing, Revocation & Multi-Device",
+      "status": "MISSING",
+      "source_line": 433,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 12,
+      "title": "Sıfır Bilgi / Anonim Yetki Katmanı / Zero-Knowledge / Anonymous Credential Layer",
+      "status": "MISSING",
+      "source_line": 455,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 13,
+      "title": "QR, Tek Kullanımlık Davet ve İlk Bağlantı / QR, One-Time Invite & Contact Bootstrap",
+      "status": "MISSING",
+      "source_line": 477,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 14,
+      "title": "Kullanıcı Adı / Alias Kaydı ve Tam Eşleşme / Username / Alias Registry & Exact-Match Resolution",
+      "status": "PARTIAL",
+      "source_line": 500,
+      "evidence_paths": [
+        "crates/alias-policy/src/lib.rs",
+        "docs/ADR_0005_ALIAS_POLICY.md"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 15,
+      "title": "Dönen Buluşma Adresi ve Mesaj İsteği / Rendezvous Rotation & Message Request",
+      "status": "MISSING",
+      "source_line": 524,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 16,
+      "title": "Grup ve Kurum Alias’ı + Doğrulama Alanı / Group & Organization Alias + Verification Domain",
+      "status": "MISSING",
+      "source_line": 547,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 17,
+      "title": "Kripto Sağlayıcısı ve Protokol Değiştirilebilirliği / CryptoProvider & Protocol Agility",
+      "status": "PARTIAL",
+      "source_line": 570,
+      "evidence_paths": [
+        "crates/provider-contract/src/lib.rs",
+        "docs/ADR_0004_PROVIDER_CONTRACT.md"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 18,
+      "title": "PQXDH / İlk Anahtar Anlaşması / PQXDH / Initial Key Agreement",
+      "status": "MISSING",
+      "source_line": 593,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 19,
+      "title": "Double Ratchet / Kuantum Sonrası Mandala Hazır Oturum / Double Ratchet / Triple-Ratchet-Ready Session",
+      "status": "PARTIAL",
+      "source_line": 615,
+      "evidence_paths": [
+        "packages/reference-client/src/modules/messaging/message-derivation.service.ts"
+      ],
+      "production_approved": false,
+      "note": "Test-only symmetric chain is not Double Ratchet."
+    },
+    {
+      "id": 20,
+      "title": "Manuel Sohbet Çözücü Anahtar / Manual Conversation Solver Key",
+      "status": "MISSING",
+      "source_line": 638,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 21,
+      "title": "Shamir Gizli Paylaşımı / Dağıtık Kurtarma / Shamir Secret Sharing / Distributed Recovery",
+      "status": "MISSING",
+      "source_line": 652,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 22,
+      "title": "MLS ile Grup Uçtan Uca Şifreleme / Group E2EE with MLS",
+      "status": "MISSING",
+      "source_line": 675,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 23,
+      "title": "Mesaj Zarfı, İçerik Tipleri ve Metadata Minimizasyonu / Message Envelope, Content Types & Metadata Minimization",
+      "status": "PARTIAL",
+      "source_line": 698,
+      "evidence_paths": [
+        "packages/reference-client/src/modules/messaging/message-open.service.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 24,
+      "title": "Kaybolan Mesajlar, Yaşam Süresi ve Maksimum Saklama / Disappearing Messages, TTL & Maximum Lifetime",
+      "status": "PARTIAL",
+      "source_line": 720,
+      "evidence_paths": [
+        "packages/reference-client/src/modules/messaging/session-store.service.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 25,
+      "title": "Dosya, Medya ve Ses Yükü Gizliliği / File, Media & Voice Payload Privacy",
+      "status": "MISSING",
+      "source_line": 742,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 26,
+      "title": "Steganografik / Gölge Mesaj Sağlayıcısı / Steganographic / Shadow Message Provider",
+      "status": "MISSING",
+      "source_line": 764,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 27,
+      "title": "Taşıma Soyutlaması ve Ağ Modu Denetleyicisi / Transport Abstraction & Network Mode Controller",
+      "status": "PARTIAL",
+      "source_line": 787,
+      "evidence_paths": [
+        "crates/policy/src/lib.rs"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 28,
+      "title": "rust-libp2p ile Eşler Arası Ağ Çekirdeği / P2P Core with rust-libp2p",
+      "status": "MISSING",
+      "source_line": 809,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 29,
+      "title": "Arti ile Tor / Soğan Taşıması / Tor / Onion Transport with Arti",
+      "status": "MISSING",
+      "source_line": 831,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 30,
+      "title": "Köprü ve Takılabilir Taşıma / Sansür Direnci / Bridge & Pluggable Transport / Censorship Resistance",
+      "status": "MISSING",
+      "source_line": 855,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 31,
+      "title": "Karıştırma Ağı Çekirdeği / Mix Network Core",
+      "status": "MISSING",
+      "source_line": 877,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 32,
+      "title": "Sahte Trafik Motoru / Cover Traffic Engine",
+      "status": "MISSING",
+      "source_line": 900,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 33,
+      "title": "Paket Doldurma ve Trafik Şekillendirme / Padding & Traffic Shaping",
+      "status": "MISSING",
+      "source_line": 922,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 34,
+      "title": "Rota Döndürme ve Korelasyon Savunması / Route Rotation & Correlation Defense",
+      "status": "MISSING",
+      "source_line": 944,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 35,
+      "title": "Sakla-ve-İlet / Şifreli Posta Kutusu / Store-and-Forward / Encrypted Mailbox",
+      "status": "MISSING",
+      "source_line": 966,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 36,
+      "title": "Çevrimdışı Yerel Ağ — Wi-Fi / Bluetooth / Offline Local Mesh — Wi‑Fi / Bluetooth",
+      "status": "MISSING",
+      "source_line": 989,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 37,
+      "title": "Şifreli Yerel Veritabanı / Encrypted Local Database",
+      "status": "MISSING",
+      "source_line": 1014,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 38,
+      "title": "Donanım Destekli Anahtar Koruması / Hardware-Backed Key Protection",
+      "status": "MISSING",
+      "source_line": 1037,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 39,
+      "title": "Uygulama Kilidi, Panik Kilidi ve Oturum Mühürleme / App Lock, Panic Lock & Session Seal",
+      "status": "MISSING",
+      "source_line": 1059,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 40,
+      "title": "Baskı Şifresi, Sahte Kasa ve Derin Kasa / Duress Password, Decoy Vault & Deep Vault",
+      "status": "MISSING",
+      "source_line": 1081,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 41,
+      "title": "Panik Silme ve Kriptografik Silme / Panic Wipe & Cryptographic Erasure",
+      "status": "MISSING",
+      "source_line": 1103,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 42,
+      "title": "Uzaktan Acil Kilit, Anahtar İptali ve Silme / Remote Emergency Lock, Key Revocation & Wipe",
+      "status": "MISSING",
+      "source_line": 1126,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 43,
+      "title": "Maskelenmiş Uygulama ve Maskeli Bildirimler / Disguised App & Masked Notifications",
+      "status": "MISSING",
+      "source_line": 1149,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 44,
+      "title": "Ekran Görüntüsü, Kayıt, Yansıtma ve Uygulama Değiştirici Koruması / Screen Capture, Recording, Mirroring & App-Switcher Protection",
+      "status": "MISSING",
+      "source_line": 1172,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 45,
+      "title": "RAM Temizliği ve Hassas Tampon Disiplini / RAM Cleanup & Sensitive Buffer Discipline",
+      "status": "PARTIAL",
+      "source_line": 1193,
+      "evidence_paths": [
+        "crates/secure-memory/src/lib.rs",
+        "packages/security/src/secure-memory.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 46,
+      "title": "Cihaz İçi Çeviri / On-Device Translation",
+      "status": "MISSING",
+      "source_line": 1216,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 47,
+      "title": "Yazım Tarzı Maskeleme ve Dilsel Varyasyon / Stylometry Masking & Language Noise",
+      "status": "MISSING",
+      "source_line": 1238,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 48,
+      "title": "Ses Maskeleme ve Yerel Ses Gizliliği / Voice Masking & Local Audio Privacy",
+      "status": "MISSING",
+      "source_line": 1260,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 49,
+      "title": "Gizlilik Risk Göstergesi ve Belirlenimci Güvenlik Motoru / Privacy Risk Indicator & Deterministic Security Engine",
+      "status": "MISSING",
+      "source_line": 1282,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 50,
+      "title": "Anonim Başlangıç Eğitimi ve Güvenlik Koçu / Anonymous Onboarding & Security Coach",
+      "status": "MISSING",
+      "source_line": 1304,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 51,
+      "title": "Anonim İtibar Yetki Belgesi / Anonymous Reputation Credential",
+      "status": "MISSING",
+      "source_line": 1327,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 52,
+      "title": "İş İspatı, Hız Sınırları ve Spam Savunması / Proof-of-Work, Rate Limits & Spam Defense",
+      "status": "MISSING",
+      "source_line": 1349,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 53,
+      "title": "Topluluk Raporlama ve Moderasyon / Community Reporting & Moderation",
+      "status": "MISSING",
+      "source_line": 1371,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 54,
+      "title": "Düğüm Kaydı, Roller ve Yetenek Kanıtı / Node Registration, Roles & Capability Proof",
+      "status": "MISSING",
+      "source_line": 1393,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 55,
+      "title": "Düğüm İtibarı ve Sağlık Kanıtı / Node Reputation & Health Proof",
+      "status": "MISSING",
+      "source_line": 1415,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 56,
+      "title": "Düğüm Katkı Puanı ve Ödül Motoru / Node Contribution Score & Reward Engine",
+      "status": "MISSING",
+      "source_line": 1437,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 57,
+      "title": "Coğrafi / Ağ Çeşitliliği Teşvikleri / Geographic / Network Diversity Incentives",
+      "status": "MISSING",
+      "source_line": 1460,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 58,
+      "title": "Sybil / Düğüm Dolandırıcılığı Savunması / Sybil / Node Fraud Defense",
+      "status": "MISSING",
+      "source_line": 1482,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 59,
+      "title": "Ödeme Alanı İzolasyonu / Payment Domain Isolation",
+      "status": "MISSING",
+      "source_line": 1505,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 60,
+      "title": "Anonim Kullanım Hakkı Üretimi ve Kullanımı / Anonymous Entitlement Issuance & Redemption",
+      "status": "MISSING",
+      "source_line": 1527,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 61,
+      "title": "Ödeme Kanalları — Kart, Uygulama Mağazası, Web, Kupon / Payment Rails — Card, App Store, Web, Voucher",
+      "status": "MISSING",
+      "source_line": 1550,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 62,
+      "title": "Kullanıcı Adı Fiyatlama, Kiralama, Yenileme ve Premium Alias / Username Pricing, Lease, Renewal & Premium Alias",
+      "status": "MISSING",
+      "source_line": 1573,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 63,
+      "title": "Depolama / Bant Genişliği / Performans Ürünleri / Storage / Bandwidth / Performance Products",
+      "status": "MISSING",
+      "source_line": 1595,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 64,
+      "title": "KULLANICI PAZAR YERİ — REDDEDİLDİ / Marketplace, Anonymous/Pseudonymous Commerce & Escrow",
+      "status": "REJECTED",
+      "source_line": 1617,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 65,
+      "title": "Cüzdan / Opsiyonel Gizlilik Ödeme Kanalı Soyutlaması / Wallet / Optional Privacy Payment Rail Abstraction",
+      "status": "MISSING",
+      "source_line": 1625,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 66,
+      "title": "Kurumsal / Özel Kuruluş Ağı / Enterprise / Private Organization Network",
+      "status": "MISSING",
+      "source_line": 1648,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 67,
+      "title": "Gizlilik Güvenli Yönetim Konsolu / Privacy-Safe Admin Console",
+      "status": "MISSING",
+      "source_line": 1671,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 68,
+      "title": "Düğüm Operasyonları ve Ağ Sağlığı Konsolu / Node Operations & Network Health Console",
+      "status": "MISSING",
+      "source_line": 1693,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 69,
+      "title": "Düğüm Ödül Mutabakatı ve Finans Defteri / Node Reward Settlement & Financial Ledger",
+      "status": "MISSING",
+      "source_line": 1714,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 70,
+      "title": "Politika ve Yapılandırma Konsolu / Policy & Configuration Console",
+      "status": "MISSING",
+      "source_line": 1737,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 71,
+      "title": "Olay Müdahalesi, Acil Kapatma Sınırları ve Güvenli Bozulma / Incident Response, Kill-Switch Boundaries & Safe Degradation",
+      "status": "MISSING",
+      "source_line": 1759,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 72,
+      "title": "Yedekleme, Felaket Kurtarma ve Gizlilik Koruyan Geri Yükleme / Backup, DR & Privacy-Preserving Restore",
+      "status": "MISSING",
+      "source_line": 1781,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 73,
+      "title": "Gizlilik Güvenli Ürün Analitiği / Privacy-Safe Product Analytics",
+      "status": "MISSING",
+      "source_line": 1803,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 74,
+      "title": "Birim, Özellik Tabanlı ve Fuzz/Rastgele Bozuk Girdi Test Temeli / Unit, Property-Based & Fuzz Testing Foundation",
+      "status": "PARTIAL",
+      "source_line": 1827,
+      "evidence_paths": [
+        "packages/reference-client/src/modules/messaging/messaging.service.spec.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 75,
+      "title": "Kripto Test Vektörleri, Uyumluluk ve Resmi İnceleme Kapısı / Crypto Vectors, Interoperability & Formal Review Gate",
+      "status": "MISSING",
+      "source_line": 1848,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 76,
+      "title": "Anonimlik, Bağlanabilirlik ve Trafik Korelasyon Simülasyonu / Anonymity, Linkability & Traffic-Correlation Simulation",
+      "status": "MISSING",
+      "source_line": 1869,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 77,
+      "title": "Yük, Eşzamanlılık, Pil ve Mobil Performans / Load, Concurrency, Battery & Mobile Performance",
+      "status": "MISSING",
+      "source_line": 1890,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 78,
+      "title": "Platform Güvenlik Matrisi ve Cihaz Laboratuvarı / Platform Security Matrix & Device Lab",
+      "status": "MISSING",
+      "source_line": 1911,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 79,
+      "title": "Statik Kod, Bağımlılık, SBOM, Gizli Değer ve Gizlilik Kapıları / SAST, Dependency, SBOM, Secret & Privacy Static Gates",
+      "status": "PARTIAL",
+      "source_line": 1932,
+      "evidence_paths": [
+        "apps/api/test/forbidden-imports.spec.ts"
+      ],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 80,
+      "title": "Bağımsız Denetim, Sızma Testi ve Hata Ödülü / Independent Audit, Pen Test & Bug Bounty",
+      "status": "MISSING",
+      "source_line": 1953,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 81,
+      "title": "Halka Açık Yayın Kapısı ve Sürüm Orkestratörü / Public Launch Gate & Release Orchestrator",
+      "status": "MISSING",
+      "source_line": 1975,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 82,
+      "title": "Secure Drop / Güvenli Bilgi Bırakma Ürün Adaptörü / Secure Drop / Whistleblower Product Adapter",
+      "status": "MISSING",
+      "source_line": 1999,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 83,
+      "title": "Özel Dosya Transferi Ürün Adaptörü / Private File Transfer Product Adapter",
+      "status": "MISSING",
+      "source_line": 2020,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 84,
+      "title": "Gizli Yapay Zekâ İletişim Adaptörü / Confidential AI Communication Adapter",
+      "status": "MISSING",
+      "source_line": 2041,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 85,
+      "title": "Gelir Motoru Alanı / Revenue Engine Domain",
+      "status": "MISSING",
+      "source_line": 2065,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 86,
+      "title": "Dinamik Düğüm Ödül Motoru / Dynamic Node Reward Engine",
+      "status": "MISSING",
+      "source_line": 2107,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 87,
+      "title": "Ağ Sürdürülebilirlik Rezervi / Network Sustainability Reserve",
+      "status": "MISSING",
+      "source_line": 2148,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 88,
+      "title": "Finansal Sert Blok Motoru / Financial Hard-Block Engine",
+      "status": "MISSING",
+      "source_line": 2185,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 89,
+      "title": "Ödeme Ücret Politikası / PaymentFeePolicy",
+      "status": "MISSING",
+      "source_line": 2222,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 90,
+      "title": "Ödeme Korelasyon Koruması / Payment Correlation Protection",
+      "status": "MISSING",
+      "source_line": 2257,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 91,
+      "title": "Düğüm İşletmecisi Alanı / Node Operator Domain",
+      "status": "MISSING",
+      "source_line": 2294,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 92,
+      "title": "Gizlilik Güvenli Maliyet Telemetri Motoru / Privacy-Safe Cost Telemetry Engine",
+      "status": "MISSING",
+      "source_line": 2331,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 93,
+      "title": "Birim Ekonomisi Motoru / Unit Economics Engine",
+      "status": "MISSING",
+      "source_line": 2369,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 94,
+      "title": "Senaryo ve Stres Motoru / Scenario & Stress Engine",
+      "status": "MISSING",
+      "source_line": 2405,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 95,
+      "title": "Kullanıcı Adı Büyüme Motoru / Username Growth Engine",
+      "status": "MISSING",
+      "source_line": 2440,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 96,
+      "title": "Kullanıcı Adı Fiyatlama ve Portföy Motoru / Username Pricing & Portfolio Engine",
+      "status": "MISSING",
+      "source_line": 2476,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 97,
+      "title": "İsim İşgali ve Rezervasyon Savunması / Anti-Squatting & Reservation Engine",
+      "status": "MISSING",
+      "source_line": 2514,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 98,
+      "title": "Kurumsal Gelir Alanı / Enterprise Revenue Domain",
+      "status": "MISSING",
+      "source_line": 2551,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 99,
+      "title": "PAZAR YERİ EKONOMİK ARAYÜZÜ — REDDEDİLDİ / Marketplace Economic Interface",
+      "status": "REJECTED",
+      "source_line": 2588,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 100,
+      "title": "Ölçek Kapısı Motoru / Scale Gate Engine",
+      "status": "MISSING",
+      "source_line": 2596,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 101,
+      "title": "Gizliliği Koruyan İş Zekâsı / Privacy-Preserving Business Intelligence",
+      "status": "MISSING",
+      "source_line": 2633,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 102,
+      "title": "Ekonomik Yayın Kapısı / Economic Launch Gate",
+      "status": "MISSING",
+      "source_line": 2670,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 103,
+      "title": "Karşılıklı İlk Temas Doğrulaması / Mutual First-Contact Verification",
+      "status": "MISSING",
+      "source_line": 2768,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 104,
+      "title": "Genişletilmiş Uygulama Maskeleme Sağlayıcısı / Extended Disguise Provider",
+      "status": "MISSING",
+      "source_line": 2788,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 105,
+      "title": "Ters Şifre / Acil Durum Şifresiyle Kriptografik Silme / Reverse Credential Emergency Erasure",
+      "status": "MISSING",
+      "source_line": 2819,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 106,
+      "title": "I2P Taşıma Adaptörü / I2P Transport Adapter",
+      "status": "MISSING",
+      "source_line": 2840,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 107,
+      "title": "Kullanıcı Cihazı Gönüllü Aktarma Düğümü Denetleyicisi / User Device Relay Contribution Controller",
+      "status": "MISSING",
+      "source_line": 2860,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    },
+    {
+      "id": 108,
+      "title": "Şirket Hazinesi ve Soğuk Cüzdan Güvenliği / Treasury & Cold Wallet Security",
+      "status": "MISSING",
+      "source_line": 2884,
+      "evidence_paths": [],
+      "production_approved": false,
+      "note": "No implementation claimed; requires detailed requirement and test mapping."
+    }
+  ]
+}

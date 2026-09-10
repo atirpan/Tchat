@@ -1,0 +1,12 @@
+[package]
+name = "am-secure-memory"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+zeroize = "=1.9.0"
+getrandom = "=0.4.3"
+
+[lints]
+workspace = true

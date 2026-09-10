@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Anonim Messenger",
+    "slug": "anonim-messenger",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "anonim-messenger",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonimmessenger.mobile"
+    },
+    "android": {
+      "package": "com.anonimmessenger.mobile",
+      "permissions": ["android.permission.INTERNET"]
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
